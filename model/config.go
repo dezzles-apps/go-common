@@ -78,7 +78,7 @@ func resolveEnvVarsInStruct(v interface{}) {
 func LoadConfig[T any]() (*Config[T], error) {
 	var config Config[T]
 	env := os.Getenv("ENVIRONMENT")
-	configFile := "config/config." + env + ".yaml"
+	configFile := "config/config." + env + ".yml"
 	data, err := os.ReadFile(configFile)
 	if err != nil {
 		return nil, err
