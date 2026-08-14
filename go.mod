@@ -1,4 +1,4 @@
-module dezzles-apps/go-common
+module github.com/dezzles-apps/go-common
 
 go 1.26.4
 
