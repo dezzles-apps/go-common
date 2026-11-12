@@ -24,6 +24,7 @@ func (d *Database) Connect(config *model.DatabaseConfig) error {
 	cfg.Net = "tcp"
 	cfg.Addr = fmt.Sprintf("%s:%d", config.Host, config.Port)
 	cfg.DBName = config.Database
+	cfg.ParseTime = true
 	// Get a database handle.
 	var err error
 	d.db, err = sql.Open("mysql", cfg.FormatDSN())
