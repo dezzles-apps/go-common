@@ -16,7 +16,8 @@ type Config[T any] struct {
 }
 
 type ServerConfig struct {
-	Port string `yaml:"port"`
+	Port         string `yaml:"port"`
+	DebugLogging bool   `yaml:"debugLogging"`
 }
 
 type FirebaseConfig struct {
